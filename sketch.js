@@ -26,12 +26,13 @@ function setup() {
   var plane = new Plane({
     x: 0,
     y: 0,
-    z: 0,
-    width: 15,     //150,230
-    height: 23,
-    red: random(255),
-    green: random(255),
-    blue: random(255),
+    z: -5,
+    width: 3,     //150,230
+    height: 4.6,
+    asset:'planeAsset',
+    // red: random(255),
+    // green: random(255),
+    // blue: random(255),
     rotationX: -90,
   });
   markerZB.addChild(plane);
