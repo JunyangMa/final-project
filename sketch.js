@@ -29,8 +29,8 @@ function setup() {
     x: 0,
     y: -1,
     z: -17,
-    radius: 0.435,    //8.7
-    height: 35.6,     //712
+    radius: 0.435,    
+    height: 35.6,     
     asset:'cylinderAsset',
     rotationX: 90
   });
@@ -40,22 +40,11 @@ function setup() {
     x: 0,
     y: 17,
     z: 0,
-    radius: 0.435,    //8.7
-    height: 35.6,     //712
+    radius: 0.435,    
+    height: 35.6,     
     asset:'cylinderAsset',
   });
   markerThird.addChild(cylinder3);
-
-  // var plane = new Plane({
-  //   x: 0,
-  //   y: 0,
-  //   z: -5,
-  //   width: 3,
-  //   height: 4.6,
-  //   asset:'planeAsset',
-  //   rotationX: -90
-  // });
-  // markerZB.addChild(plane);
 
 }
 
