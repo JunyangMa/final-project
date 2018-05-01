@@ -8,6 +8,7 @@ var planeZB, planeHiro, planeThird;
 
 var planeMaster1, planeContainer1;
 var planeMaster2, planeContainer2;
+var planeMaster3, planeContainer3;
 
 function setup() {
   world = new World('ARScene');
@@ -23,7 +24,7 @@ function setup() {
   planeMaster1 = new Plane({
     x: 0,
     y: 0,
-    z: 0,
+    z: -5,
     width: 3,
     height: 4.6,
     asset:'planeAsset',
@@ -37,7 +38,7 @@ function setup() {
   planeMaster2 = new Plane({
     x: 0,
     y: 0,
-    z: 0,
+    z: -5,
     width: 3,
     height: 4.6,
     asset:'planeAsset',
@@ -46,6 +47,20 @@ function setup() {
   });
   planeContainer2.addChild(planeMaster2);
   markerHiro.addChild(planeContainer2);
+
+
+  planeContainer3 = new Container3D({y:-0.5, rotationY:90});
+  planeMaster3 = new Plane({
+    x: 0,
+    y: 5,
+    z: 0,
+    width: 3,
+    height: 4.6,
+    asset:'planeAsset',
+    side: 'double'
+  });
+  planeContainer3.addChild(planeMaster3);
+  markerThird.addChild(planeContainer3);
 }
 
 
@@ -53,10 +68,17 @@ function draw() {
   if (markerZB.isVisible()) {
     planeContainer1.show();
     planeContainer2.hide();
+    planeContainer3.hide();
   }
   else if (markerHiro.isVisible()) {
     planeContainer1.hide();
     planeContainer2.show();
+    planeContainer3.hide();
+  }
+  else if (markerThird.isVisible()) {
+    planeContainer1.hide();
+    planeContainer2.hide();
+    planeContainer3.show();
   }
 
 }
